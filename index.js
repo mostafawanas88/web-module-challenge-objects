@@ -189,7 +189,17 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
+function carMaker(odometer) {
     /* code here */
-    
+    // input: odometer as a number
+    // output: updated odometer number based on drive
+    // execution: create a new empty object. include the odomoter as one of its properties. include a drive function as another property. Have the drive function take a distance and update the odometer based on that distance
+    let carDistance = {
+      odometer: odometer,
+      drive: (distance) => {
+        this.odometer += distance;
+        return this.odometer;
+      }
+    }
+    return carDistance;
 }
